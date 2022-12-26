@@ -18,7 +18,7 @@ public class Program{
         long widthSpace = width + numBlocks;
         
         long finalResolutionH = height * finalResolutionModifier;
-        long finalResolutionW = width * finalResolutionModifier + numBlocks * numBlocks;
+        long finalResolutionW = widthSpace * finalResolutionModifier;
         
         string frw = Convert.ToString(finalResolutionW);
         string frh = Convert.ToString(finalResolutionH);
