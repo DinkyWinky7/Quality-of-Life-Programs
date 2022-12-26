@@ -14,14 +14,17 @@ public class Program{
         height = block;
         width = block * numBlocks + emptyBlock;
         
+        // for spacing between tiles
+        long widthSpace = width + numBlocks;
+        
         long finalResolutionH = height * finalResolutionModifier;
-        long finalResolutionW = width * finalResolutionModifier;
+        long finalResolutionW = width * finalResolutionModifier + numBlocks * numBlocks;
         
         string frw = Convert.ToString(finalResolutionW);
         string frh = Convert.ToString(finalResolutionH);
         
         string finalResolution = $"w: {frw} h: {frh}";
         
-        Console.WriteLine($"You have {numBlocks} blocks.\nThe sprite resolution should be w: {width} and h: {height}.\n The final resolution will be {finalResolution}.");
+        Console.WriteLine($"You have {numBlocks} blocks.\nThe sprite resolution should be w: {widthSpace} and h: {height}.\n The final resolution will be {finalResolution}.");
     }
 }
